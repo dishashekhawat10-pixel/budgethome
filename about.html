@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BudgetHome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>BudgetHome</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="property-listing.html" class="nav-link">Buy</a></li>
+                <li><a href="property-listing.html" class="nav-link">Rent</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-content">
+            <h1>About BudgetHome</h1>
+            <p>Making quality housing accessible and affordable for everyone.</p>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p style="max-width: 800px; margin: 0 auto 3rem; text-align: center; color: #555;">
+                At BudgetHome, we believe that finding a home should be simple, transparent, and affordable. 
+                We focus on verified listings and trusted agents so you can make confident decisions about 
+                one of the biggest investments of your life.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Focused on Affordability</h3>
+                    <p>We specialize in properties that offer real value for money without compromising on quality or safety.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Verified Listings</h3>
+                    <p>Every property on BudgetHome is reviewed to minimize fake listings and misleading information.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Trusted Partners</h3>
+                    <p>We work with experienced agents and developers who understand the needs of budget-conscious buyers and renters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>How We Help You</h2>
+                    <p>
+                        From browsing listings to connecting with agents, BudgetHome is designed to guide you 
+                        through every step of your home journey.
+                    </p>
+
+                    <div class="contact-details">
+                        <p><i class="fas fa-search"></i> Smart search tools to quickly find homes that match your budget.</p>
+                        <p><i class="fas fa-home"></i> Diverse property types including apartments, houses, and villas.</p>
+                        <p><i class="fas fa-user-friends"></i> Support from a team that understands local markets.</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Join Our Community</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        Want to stay updated about new affordable listings and market insights? 
+                        Share your email and we’ll keep you in the loop.
+                    </p>
+                    <form>
+                        <div class="form-group">
+                            <label for="about-name">Full Name</label>
+                            <input type="text" id="about-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-email">Email Address</label>
+                            <input type="email" id="about-email" name="email" required>
+                            <p id="emailError" style="color:red;"></p>
+                        </div>
+                        <button type="submit" class="form-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BudgetHome</h3>
+                    <p>Find your perfect home without breaking the budget.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Real Estate St, City</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@budgethome.com</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="property-listing.html">Buy</a></li>
+                        <li><a href="property-listing.html">Rent</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BudgetHome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const emailinput = document.getElementById("about-email")
+    const emailError = document.getElementById("emailError")
+
+emailinput.addEventListener("input", function() {
+    if (emailinput.value.includes("@")) {
+        emailError.textContent = ""
+    } else {
+        emailError.textContent = "Invalid email address."
+    }
+})
+</script>
+</html>
+
+
